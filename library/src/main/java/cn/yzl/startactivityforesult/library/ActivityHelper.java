@@ -1,4 +1,4 @@
-package cn.yzl.startactivityforesult.java;
+package cn.yzl.startactivityforesult.library;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -6,19 +6,19 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
 public class ActivityHelper {
-    private static final String TAG = "StartActivityForResultHelperFragment_java";
+    private static  String TAG = "StartActivityForResultHelperFragment_java";
 
-    public final void startActivityForResult(FragmentActivity activity, Intent intent, int requestCode, Callback callback) {
-        StartActivityForResultHelperFragment helperFragment = this.findOrAddFragment(this.getFragmentManager(activity));
+    public static  void startActivityForResult(FragmentActivity activity, Intent intent, int requestCode, Callback callback) {
+        StartActivityForResultHelperFragment helperFragment = findOrAddFragment(getFragmentManager(activity));
         helperFragment.startActivityForResult(intent, requestCode, callback);
     }
 
-    public final void startActivityForResult(Fragment fragment, Intent intent, int requestCode, Callback callback) {
-        StartActivityForResultHelperFragment helperFragment = this.findOrAddFragment(this.getFragmentManager(fragment));
+    public static  void startActivityForResult(Fragment fragment, Intent intent, int requestCode, Callback callback) {
+        StartActivityForResultHelperFragment helperFragment = findOrAddFragment(getFragmentManager(fragment));
         helperFragment.startActivityForResult(intent, requestCode, callback);
     }
 
-    private final FragmentManager getFragmentManager(Object object) {
+    private static  FragmentManager getFragmentManager(Object object) {
         if (object instanceof FragmentActivity) {
             return ((FragmentActivity) object).getSupportFragmentManager();
         } else if (object instanceof Fragment) {
@@ -28,7 +28,7 @@ public class ActivityHelper {
         }
     }
 
-    private final StartActivityForResultHelperFragment findOrAddFragment(FragmentManager fragmentManager) {
+    private static  StartActivityForResultHelperFragment findOrAddFragment(FragmentManager fragmentManager) {
         StartActivityForResultHelperFragment fragmentByTag = (StartActivityForResultHelperFragment) fragmentManager.findFragmentByTag(TAG);
         if (fragmentByTag != null) {
             return fragmentByTag;
@@ -39,7 +39,7 @@ public class ActivityHelper {
         }
     }
 
-    interface Callback {
+   public interface Callback {
         void onResult(ActivityResult result);
     }
 }

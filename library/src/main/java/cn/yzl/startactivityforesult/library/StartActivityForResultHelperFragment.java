@@ -1,4 +1,4 @@
-package cn.yzl.startactivityforesult.java;
+package cn.yzl.startactivityforesult.library;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
