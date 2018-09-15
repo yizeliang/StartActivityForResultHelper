@@ -1,5 +1,7 @@
 
-# StartActivityForResultHelper(Kotlin) [![](https://jitpack.io/v/yizeliang/StartActivityForResultHelper.svg)](https://jitpack.io/#yizeliang/StartActivityForResultHelper)
+# StartActivityForResultHelper 
+
+[![](https://jitpack.io/v/yizeliang/StartActivityForResultHelper.svg)](https://jitpack.io/#yizeliang/StartActivityForResultHelper)
 
 灵感来自`RxPermission`
 
