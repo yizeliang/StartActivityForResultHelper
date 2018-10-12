@@ -13,8 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bt.setOnClickListener {
-            this@MainActivity.startActivityForResult(Intent(this@MainActivity, MainActivity::class.java),
-                    1000) {
+            this@MainActivity.startActivityForResult(Intent(this@MainActivity, MainActivity::class.java)) {
                 Log.e("AAA", it.resultCode.toString())
             }
         }

@@ -13,10 +13,10 @@ public class JavaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java);
-        ActivityHelper.startActivityForResult(this, new Intent(this, MainActivity.class), 100,
+        ActivityHelper.startActivityForResult(this, new Intent(this, MainActivity.class),
                 new ActivityHelper.Callback() {
                     @Override
-                    public void onResult(ActivityResult result) {
+                    protected void onResult(ActivityResult result) {
 
                     }
                 });

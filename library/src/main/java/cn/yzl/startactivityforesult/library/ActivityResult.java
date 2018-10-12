@@ -5,15 +5,16 @@ import android.content.Intent;
 public class ActivityResult {
 
     ActivityResult() {
+
     }
 
     public int requestCode;
     public int resultCode;
-    public Intent intent;
+    public Intent data;
 
-    ActivityResult(int requestCode, int resultCode, Intent intent) {
+    ActivityResult(int requestCode, int resultCode, Intent data) {
         this.requestCode = requestCode;
         this.resultCode = resultCode;
-        this.intent = intent;
+        this.data = data;
     }
 }

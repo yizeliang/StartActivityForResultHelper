@@ -1,5 +1,6 @@
 package cn.yzl.startactivityforesult.library;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.util.SparseArray;
@@ -23,6 +24,12 @@ public class StartActivityForResultHelperFragment extends Fragment {
             ActivityHelper.Callback callback = this.callbacks.get(requestCode);
             if (callback != null) {
                 ActivityResult activityResult = new ActivityResult(requestCode, resultCode, data);
+                if (callback.isSimple()) {
+                    if (resultCode == Activity.RESULT_OK) {
+                        callback.onResult(activityResult);
+                    }
+                    return;
+                }
                 callback.onResult(activityResult);
             }
         }
