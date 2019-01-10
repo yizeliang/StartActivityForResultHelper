@@ -48,7 +48,8 @@ public class ActivityHelper {
             return fragmentByTag;
         } else {
             fragmentByTag = new StartActivityForResultHelperFragment();
-            fragmentManager.beginTransaction().add(fragmentByTag, TAG).commitNow();
+            fragmentManager.beginTransaction().add(fragmentByTag, TAG)
+                    .commitNowAllowingStateLoss();
             return fragmentByTag;
         }
     }
