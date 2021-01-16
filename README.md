@@ -1,6 +1,9 @@
 
 # StartActivityForResultHelper 
 
+
+严重缺陷告警: 如果 源activity被回收, 是拿不到结果的 
+
 [![](https://jitpack.io/v/yizeliang/StartActivityForResultHelper.svg)](https://jitpack.io/#yizeliang/StartActivityForResultHelper)
 
 灵感来自`RxPermission`
