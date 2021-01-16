@@ -2,7 +2,7 @@
 # StartActivityForResultHelper 
 
 
-严重缺陷告警: 如果 源activity被回收, 是拿不到结果的 
+严重缺陷告警: 如果 源activity被回收, 是拿不到结果的 ;请使用 `Activity Result API`
 
 [![](https://jitpack.io/v/yizeliang/StartActivityForResultHelper.svg)](https://jitpack.io/#yizeliang/StartActivityForResultHelper)
 
